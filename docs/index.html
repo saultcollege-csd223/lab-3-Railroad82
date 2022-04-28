@@ -1,37 +1,146 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en">
 
-You can use the [editor on GitHub](https://github.com/saultcollege-csd223/lab-3-Railroad82/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+    <title>Getting Sarted with Anime.js</title>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+</head>
 
-### Markdown
+<body>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    <script src="anime.min.js"></script>
 
-```markdown
-Syntax highlighted code block
+    <div class="backgroundone">
 
-# Header 1
-## Header 2
-### Header 3
+        <h1 style="font-family: Impact;">This page is somethings about Anime.JS</h1>
 
-- Bulleted
-- List
+        <h3 style="font-family: Arial;">What is anime.js?</h3>
 
-1. Numbered
-2. List
+        <p style="font-family: Arial;">
+            Anime.js is a javascript library that specializes in animation! Its very simple, lightweight and is backed by a powerfull API and was created by gitlab user juliangarnier. It is the most popular and most used animation library today and works with CSS,
+            DOM attributes, javascript objects and SVG. Its first public release was on June 27th 2016 and has had 3 versions of itself to date, the latest versoin being v3.2.1, which was released on October 12th. 2020. This library has been the fastest
+            growing and has become the number 1 animation library on the open source market and for good reason. <br> It beats the basic animations that you can do with plain JS by along shot and it is easier to use!
+            <BR>There are other libraries that do very simliar things to anime.js such as velocity.js, which uses jquery style animation code. p5.js, Which has better documentation than anime.js but is more difficult to get your aniimations working. GSAP,
+            which if very similiar to Anime.js but also has better documentation and a more robust API but needs special implementations for certain libraries to get them to work with it. However I found that Anime.js was the easiest and quickest to pick
+            up and it being the most popular, I had to see what it offered. <br> Anime.JS is easy to set up too, just install the library in your folder or use the cdn. Theres also plenty of very good examples on how to use it. You can use it with basic
+            webpages and css and it works with all modern browsers! <br> However, I found the documentation to be dissapointing in the fact that its not all there. Meaning that I would love some more thought and effort put into the documentation so that
+            it be even easier to pick up!<br> Check out the GitHub <a href="https://github.com/juliangarnier/anime">here</a> or their <a href="https://animejs.com">website</a> for more on Anime.JS
+        </p>
 
-**Bold** and _Italic_ and `Code` text
+        <p style=" font-family: Arial; ">
+            I find that if you want to add animation to your website, this is your best option! The only limit to this library is your own imagination! But for now lets move on to something really simple to get started with anime.js!<br><br><br>
+        </p>
 
-[Link](url) and ![Image](src)
-```
+    </div>
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+    <h3 style="font-family: Arial; ">Lets create a simple animation of a square.</h3>
 
-### Jekyll Themes
+    <div class="square "></div>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/saultcollege-csd223/lab-3-Railroad82/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+    <script>
+        anime({
+            targets: '.square',
+            translateX: 500,
+            delay: 3000
+        });
+    </script>
 
-### Support or Contact
+    <p style="font-family: Arial; ">
+        In this example were going to take a simple square from the css file and make it move from left to right on the screen. Just like the one above!
+    </p>
+    <p style="font-family: Arial; ">
+        First we'll import the library for anime.js, if you've downloaded the library, by typing this inside of a script tag:
+        <div style="background-color:#8a8ab8f3"><pre><code class="language-plaintext ">src="anime.min.js "</code></pre>
+            </<div>
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+        </div> If not then copy the url of this
+        <a href="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js ">link!</a> </p>
+    <p style="font-family: Arial; ">
+        Then in a div tag insert the class for the square:
+        <div style="background-color:#8a8ab8f3"> <pre><code>class=".square "</code></pre></div>
+    </p>
+    <p style="font-family: Arial; ">
+        Now inside another script tag were gonna put our code for the animation!
+
+    </p>
+    <p style="font-family: Arial; ">
+        Insert this code into your script tag:
+        <pre><code>anime({
+            targets: '.square',
+            translateX: 500,
+        });</code></pre>
+    </p>
+    <p style="font-family: Arial; ">
+        You can use a loop to see it over again, or leave it out if you want the animation to only play on page load.
+    </p>
+    <div style="background-color:#8a8ab8f3"><pre><code>loop: true</code></pre></div>
+    <p style="font-family: Arial; ">
+        Heres what it looks like with a loop!
+    </p>
+
+    <div class="squaretwo "></div>
+
+    <script>
+        anime({
+            targets: '.squaretwo',
+            translateX: 500,
+            delay: 3000,
+            loop: true
+        });
+    </script>
+    <div style="background-color:#8a8ab8f3"><pre><code>class="squaretwo "</code></pre></div>
+    <div style="background-color:#8a8ab8f3"><pre><code>anime({
+        targets: '.squaretwo',
+        translateX: 500,
+        delay: 3000,
+        loop: true
+    });</code></pre></div>
+
+    <p style="font-family: Arial; ">You can do a bunch of other stuff with targets too! Like rotating, skewing, direction, duration and morphing!</p>
+    <p style="font-family: Arial; ">Here's an example of all of those put together!</p>
+
+    <div class="squarethree "></div>
+
+    <script>
+        anime({
+            targets: '.squarethree',
+            borderRadius: ['0%', '50%'],
+            translateX: 500,
+            rotateX: 360,
+            scale: 1,
+            skew: 25,
+            duration: 3000,
+            delay: 1500,
+            direction: 'alternate',
+            loop: true
+        });
+    </script>
+    <div style="background-color:#8a8ab8f3"><pre><code> class="squarethree "</code></pre></div>
+    <div style="background-color:#8a8ab8f3"><pre><code>anime({
+        targets: '.squarethree',
+        borderRadius: ['0%', '50%'],
+        translateX: 500,
+        rotateX: 360,
+        scale: 1,
+        skew: 25,
+        duration: 3000,
+        delay: 1500,
+        direction: 'alternate',
+        loop: true
+    });</code></pre></div>
+
+    <p style="font-family: Arial; ">You're now on your way to add animation to your own page! Good luck and happy coding! :)</p>
+    <p><br><br><br><br></p>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js "></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js "></script>
+</body>
+<footer>This site was created by Conner Lawrence, do not copy information or use my page with my direct approval. Any questions can be reached at conner.ca.law@gmail.com</footer>
+
+</html>
