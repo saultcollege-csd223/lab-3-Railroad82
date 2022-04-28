@@ -5,11 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Getting Started With Anime.js</title>
 </head>
 
 <body>
 
+    <script src="anime.min.js"></script>
+
+
+    <h1>Lets start with a simple movement of a square.</h1>
+
+    <div class="square"></div>
+
+    <script>
+        anime({
+            targets: '.square',
+            translateX: 250,
+            loop: true
+        });
+    </script>
+
+    <p>
+        In this example were going to take a simple square from the css file and make it move from left to right on the screen. Just like the one above!
+    </p>
+    <p>
+        First we'll import the library for anime.js by typing this inside of a script tag: scr="anime.min.js"</p>
+    <p>
+        Then in a div tag insert the class for the square: class=".square"
+    </p>
+    <p>
+        Now inside another script tag were gonna put our code for the animation!
+
+    </p>
+    <p>
+        Insert this code into your script tag: anime({ targets: '.square', translateX: 250, loop: true });
+    </p>
+    <p>You can use a loop to see it over again, or leave it out if you want the animation to only play on page load.</p>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 </body>
 
 </html>
